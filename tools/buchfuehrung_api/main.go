@@ -86,6 +86,12 @@ func main() {
 		router.GET("/", httphelper.HandlerLoggerRouter(pageRoot))
 		router.GET("/favicon.ico", httphelper.HandlerLoggerRouter(httphelper.PageMinimalFavicon))
 
+		// API v0
+		// Transactions
+		router.POST("/api/v0/transaction/add", httphelper.HandlerLoggerRouter(pageAPIV0TransactionAdd))
+		router.GET("/api/v0/transaction/get/byid/:id", httphelper.HandlerLoggerRouter(pageAPIV0TransactionGetByID))
+		router.GET("/api/v0/transaction/list", httphelper.HandlerLoggerRouter(pageAPIV0TransactionList))
+
 		log.Info("Start serving api on ", FlagBindingAPI)
 		log.Fatal(http.ListenAndServe(FlagBindingAPI, router))
 	}()
