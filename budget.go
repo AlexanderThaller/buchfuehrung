@@ -8,6 +8,7 @@ import (
 type Budgets []Budget
 
 type Budget struct {
+	ID        int `sql:"AUTO_INCREMENT"`
 	Name      string
 	Comment   Comment
 	StartTime time.Time
@@ -16,11 +17,13 @@ type Budget struct {
 }
 
 type BudgetGroups struct {
+	ID         int `sql:"AUTO_INCREMENT"`
 	Name       string
 	Categories []BudgetCategory
 }
 
 type BudgetCategory struct {
+	ID           int `sql:"AUTO_INCREMENT"`
 	Category     Category
 	Budgeted     *big.Float
 	Transactions Transactions

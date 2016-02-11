@@ -8,6 +8,7 @@ import (
 type Transactions []Transaction
 
 type Transaction struct {
+	ID        int `sql:"AUTO_INCREMENT"`
 	Category  Category
 	Comment   Comment
 	Inflow    *big.Float

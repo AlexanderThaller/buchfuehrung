@@ -1,3 +1,6 @@
 package buchfuehrung
 
-type Payee string
+type Payee struct {
+	ID   int `sql:"AUTO_INCREMENT"`
+	Name string
+}
