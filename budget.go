@@ -13,10 +13,10 @@ type Budget struct {
 	Comment   Comment
 	StartTime time.Time
 	EndTime   time.Time
-	Groups    []BudgetGroups
+	Groups    []BudgetGroup
 }
 
-type BudgetGroups struct {
+type BudgetGroup struct {
 	ID         int `sql:"AUTO_INCREMENT"`
 	Name       string
 	Categories []BudgetCategory
