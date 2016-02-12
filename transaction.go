@@ -1,18 +1,15 @@
 package buchfuehrung
 
-import (
-	"math/big"
-	"time"
-)
+import "time"
 
 type Transactions []Transaction
 
 type Transaction struct {
 	ID        int `sql:"AUTO_INCREMENT"`
 	Category  Category
-	Comment   Comment
-	Inflow    *big.Float
-	Outflow   *big.Float
+	Comment   string
+	Inflow    float64
+	Outflow   float64
 	Payee     Payee
 	TimeStamp time.Time
 }

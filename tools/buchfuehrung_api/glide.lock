@@ -1,5 +1,5 @@
-hash: 9304d4f85b3ed42c7b4e6c779041d59ae5c7d9b9d423c7ed487f9f12efa40955
-updated: 2016-02-11T16:24:48.888298839+01:00
+hash: 80409c13b999265542e7de870b6bb1fcc93fe496e19f865a2394ccf649b47ecc
+updated: 2016-02-11T21:44:18.019547666+01:00
 imports:
 - name: github.com/AlexanderThaller/httphelper
   version: 6367188448e742f4d6ea7dfc8f6026263d6de454
@@ -37,6 +37,8 @@ imports:
   - internal/bitbucket.org/ww/goautoneg
 - name: github.com/prometheus/procfs
   version: 406e5b7bfd8201a36e2bb5f7bdae0b03380c2ce8
+- name: github.com/shopspring/decimal
+  version: d282b0416666d39ec41fc37a31123241ffe6d935
 - name: github.com/Sirupsen/logrus
   version: be52937128b38f1d99787bb476c789e2af1147f1
 - name: golang.org/x/net

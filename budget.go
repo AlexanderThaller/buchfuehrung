@@ -1,16 +1,13 @@
 package buchfuehrung
 
-import (
-	"math/big"
-	"time"
-)
+import "time"
 
 type Budgets []Budget
 
 type Budget struct {
 	ID        int `sql:"AUTO_INCREMENT"`
 	Name      string
-	Comment   Comment
+	Comment   string
 	StartTime time.Time
 	EndTime   time.Time
 	Groups    []BudgetGroup
@@ -25,6 +22,6 @@ type BudgetGroup struct {
 type BudgetCategory struct {
 	ID           int `sql:"AUTO_INCREMENT"`
 	Category     Category
-	Budgeted     *big.Float
+	Budgeted     float64
 	Transactions Transactions
 }
